@@ -148,4 +148,24 @@ temp-*
 *.DS_Store
 git ls-files --other --ignored --exclude-standard #Lists all ignored files in this project
 ```
+## GROUP CHANGES
 
+Name a series of commits and combine completed efforts
+
+```bash
+git branch #Lists all local branches in the current repository
+git branch -a # Active branch.And all remote branches.
+git branch [branch_name] #Creates a new branch
+git checkout [branch-name] #Switches to the specified branch and updates the working directory.
+git checkout -b [branch-name] # creates and switches to the branch.
+
+git branch -m [old-name] [new-name] # rename the branch name.
+git branch -d [branch-name] # Deletes the specified branch.
+```
+Combines the specified branch’s history into the current branch.
+
+```bash
+git merge [branch] 
+git merge [branch] --no--ff #Create a merge commit even when the merge resolves as a fast-forward.
+git merge [branch] -m [commit message]. #Set the commit message (in case one is created).
+```
