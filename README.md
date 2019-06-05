@@ -86,3 +86,21 @@ git add . //This command adds one or more to the staging area.
 git add -A // file rename using linux command "mv"
 git add -u // file rename using UI
 ```
+## REFACTOR FILENAMES
+
+Relocate and remove versioned files.
+
+
+```bash
+git mv [file-original] [file-renamed] //Changes the file name and prepares it for commit.
+
+git rm [file] // Deletes the file from the working directory and stages the deletion.
+git rm --cached [file] // Removes the file from version control but preserves the file locally.
+
+NOTE: bash command [mv] then use [git add -A] 
+OR UI rename a file -> use [git add [file]] and [git add -u] 
+
+NOTE: git rm [file]; 
+git reset HEAD [file], git checkout -- [file] // reverse the file from your working directory.
+```
+
