@@ -169,3 +169,69 @@ git merge [branch]
 git merge [branch] --no--ff #Create a merge commit even when the merge resolves as a fast-forward.
 git merge [branch] -m [commit message]. #Set the commit message (in case one is created).
 ```
+## Rewriting history
+
+Git uses a few different methods to record changes. 
+
+```bash
+git commit --amend #command is a convenient way to modify the most recent commit.
+```
+Rebase is one of two Git utilities that specializes in integrating changes from one branch onto another. The other change integration utility is git merge. Merge is always a forward moving change record. Alternatively, rebase has powerful history rewriting features. [Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+```bash
+git rebase [branch-name] # First, rewinding head to replay your work on top of it...
+git rebase --interactive [BASE] # It's like Git commit --amend on steroids.
+#(BASE an ID, a branch name, a tag, or a relative reference to HEAD).
+
+git rebase --continue/--abort 
+#The --continue and --abort command line arguments can be passed to git rebase 
+#to advance or reset the the rebase when dealing with conflicts.
+```
+## SAVE FRAGMENTS
+
+git [stash](https://www.atlassian.com/git/tutorials/saving-changes/git-stash) temporarily shelves. 
+
+This command temporarily stores all the modified tracked files.
+
+```bash
+git stash save "message" #it's good practice to annotate your stashes with a description.
+git stash -u # stash your untracked files
+git stash list # 
+```
+This is useful if you want to apply the same stashed changes to multiple branches.
+
+```bash
+git stash apply #
+git stash apply stash@{2} # a particular stash.
+```
+
+Cleaning up your stash
+
+```bash
+git stash drop # first stash
+git stash drop stash@{1} # a particular stash
+git stash clear #delete all of your stashes
+```
+
+Apply and drop a stash in one command.
+
+```bash
+git stash pop #the most recently created stash.
+git stash pop stash@{2} # A particular stash.
+```
+
+### Viewing stash diffs
+
+You can view a summary of a stash with:
+
+```bash
+git stash show
+git stash show -p #To view the full diff of a stash
+```
+
+Creating a branch from your stash
+
+```bash
+git stash branch [branch-name] stash@{1}
+```
+
