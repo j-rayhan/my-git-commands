@@ -234,4 +234,25 @@ Creating a branch from your stash
 ```bash
 git stash branch [branch-name] stash@{1}
 ```
+## Git Tagging
 
+Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1).
+
+```bash
+git tag <tagname> #Light weight Tags
+git tag -a <tagname> #Annotated tags are stored as full objects 
+# {the tagger name, email, and date. Similar to commits and commit messages}
+git tag --list 
+git tag --delete <tagname>
+git tag <tagname> -m [message]
+git tag -a <tagname> <commit id>
+git tag -a <tagname> -f <commit id>
+
+git diff <tagname> <tagname>
+
+git push origin <tagname>
+git push origin master --tags
+git push origin :v-0.8-alpha # delete remote tag
+
+git checkout <tagname> #command will checkout the ... tag
+```
