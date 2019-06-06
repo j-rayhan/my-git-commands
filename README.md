@@ -256,3 +256,5 @@ git push origin :v-0.8-alpha # delete remote tag
 
 git checkout <tagname> #command will checkout the ... tag
 ```
+## GIT syncing
+git remote/ git fetch/ git push/ git pull
