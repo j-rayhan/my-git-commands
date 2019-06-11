@@ -66,6 +66,8 @@ git diff "file path" #Shows file differences not yet staged.
 git diff "commit id" "commit id" #show two commit differences.
 git diff [first-branch]...[second-branch] #Shows content differences between two branches
 git diff --staged  #Shows file differences between staging and the last file version.
+git diff --name-only # The list of changed files.
+git diff --name-only --diff-filter=U #the simplest way to list conflicted files
 ```
 
 Unstages the file, but preserve its contents. more [info](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset/). 
