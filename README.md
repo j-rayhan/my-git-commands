@@ -176,7 +176,9 @@ git merge [branch] -m [commit message]. #Set the commit message (in case one is 
 Git uses a few different methods to record changes. 
 
 ```bash
+git commit -m "commit-message" --author="Johir Rayhan <johir.rayhan01@gmail.com>"
 git commit --amend #command is a convenient way to modify the most recent commit.
+git commit --amend --author="Johir Rayhan <johir.rayhan01@gmail.com>" # Changed the commited author.
 ```
 Rebase is one of two Git utilities that specializes in integrating changes from one branch onto another. The other change integration utility is git merge. Merge is always a forward moving change record. Alternatively, rebase has powerful history rewriting features. [Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
