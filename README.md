@@ -179,6 +179,17 @@ Git uses a few different methods to record changes.
 git commit -m "commit-message" --author="Johir Rayhan <johir.rayhan01@gmail.com>"
 git commit --amend #command is a convenient way to modify the most recent commit.
 git commit --amend --author="Johir Rayhan <johir.rayhan01@gmail.com>" # Changed the commited author.
+# Reset All commit author
+  git filter-branch --commit-filter '
+      if [ "$GIT_AUTHOR_NAME" = "OLD-NAME" ];
+         then
+                GIT_AUTHOR_NAME="Johir Rayhan";
+                GIT_AUTHOR_EMAIL="johir.rayhan01@gmail.com";
+                git commit-tree "$@";
+     else
+                git commit-tree "$@";
+    fi' HEAD
+
 ```
 Rebase is one of two Git utilities that specializes in integrating changes from one branch onto another. The other change integration utility is git merge. Merge is always a forward moving change record. Alternatively, rebase has powerful history rewriting features. [Merging vs Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
