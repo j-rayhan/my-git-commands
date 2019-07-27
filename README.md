@@ -12,6 +12,9 @@ This command sets the author name and email address respectively to be used with
 ```bash
 git config –global user.name "johir-rayhan"
 git config –global user.email "johir.rayhan01@gmail.com"
+
+git config user.name "johir-rayhan" # only one local repository
+git config user.email "johir.rayhan01@gmail.com" # See the result cat .git/config find [user] key
 ```
 To turn on code highlighting.
 
