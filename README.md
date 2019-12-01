@@ -244,7 +244,8 @@ You can view a summary of a stash with:
 
 ```bash
 git stash show
-git stash show -p #To view the full diff of a stash
+git stash show -p #To view the full diff on first stash
+git stash show -p stash@{1} #To view the full diff of a stash 1
 ```
 
 Creating a branch from your stash
