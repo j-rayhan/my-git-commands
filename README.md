@@ -120,6 +120,8 @@ git log --follow [file] #Lists version history for a file, including renames
 git log --abbrev-commit # commit id has been short.
 git log [commit id]...[commit id] # show details between those commit.
 git log --since="3 days ago" #same as **git log [commit id]...[commit id]**
+git log --reverse # To go the first commit of the repo
+
 
 git log --oneline --graph --decorate
 
