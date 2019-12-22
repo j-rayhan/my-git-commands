@@ -279,3 +279,17 @@ git checkout <tagname> #command will checkout the ... tag
 ```
 ## GIT syncing
 git remote/ git fetch/ git push/ git pull
+
+###TODO
+Apply PUSH.
+
+```bash
+git push origin branch-name #the .
+git push --all # .
+```
+Apply PULL.
+
+```bash
+git pull origin branch-name #the .
+git pull origin branch-name --allow-unrelated-histories # refusing to merge unrelated histories(--allow-unrelated-histories).
+```
