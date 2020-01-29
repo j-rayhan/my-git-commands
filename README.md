@@ -82,6 +82,8 @@ git reset --soft [commit id] #The Staging Index and the Working Directory are le
 git reset --mixed [commit id] #The Staging Index is reset to the state of the specified commit.
 git reset --hard [commit id] #DANGEROUS, pending work that was hanging out in the Staging Index and Working Directory will be lost.
 git reset --hard HEAD~2 #moves the current branch backward by two commits NOTE: used on unpublished commits.
+git reset --hard origin/master #Remove all git commit which has not been pushed
+
 ```
 
 Snapshots the file in preparation for versioning.
