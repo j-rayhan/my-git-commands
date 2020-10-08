@@ -111,6 +111,7 @@ OR UI rename a file -> use [git add [file]] and [git add -u]
 NOTE: git rm [file]; 
 git reset HEAD [file], git checkout -- [file] #reverse the file from your working directory.
 ```
+Info: 1. [--cached](https://stackoverflow.com/questions/41863484/clear-git-local-cache/41863575)
 ## REVIEW HISTORY
 
 Browse and inspect the evolution of project files.
