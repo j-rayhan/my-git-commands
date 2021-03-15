@@ -186,6 +186,7 @@ Git uses a few different methods to record changes.
 ```bash
 git commit -m "commit-message" --author="Johir Rayhan <johir.rayhan01@gmail.com>"
 git commit --amend #command is a convenient way to modify the most recent commit.
+git commit --amend --reset-author # After set git config --global user.name/email For fix the identity.
 git commit --amend --author="Johir Rayhan <johir.rayhan01@gmail.com>" # Changed the commited author.
 # Reset All commit author
   git filter-branch --commit-filter '
